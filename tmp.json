@@ -1,0 +1,145 @@
+[
+  {
+    "longName": "Calc 1",
+    "id": "math 221",
+    "creditHours": 4.0,
+    "weight": 0.0,
+    "attributes": [],
+    "preReqs": [],
+    "coReqs": [],
+    "semesterExclusions": []
+  },
+  {
+    "longName": "Calc 2",
+    "id": "math 231",
+    "creditHours": 3.0,
+    "weight": 0.0,
+    "attributes": [],
+    "preReqs": [
+      "math 221"
+    ],
+    "coReqs": [],
+    "semesterExclusions": []
+  },
+  {
+    "longName": "Physics: Mechanics",
+    "id": "phys 211",
+    "creditHours": 4.0,
+    "weight": 1.0,
+    "attributes": [],
+    "preReqs": [],
+    "coReqs": [
+      "math 231"
+    ],
+    "semesterExclusions": []
+  },
+  {
+    "longName": "Calc 3",
+    "id": "math 241",
+    "creditHours": 4.0,
+    "weight": 0.0,
+    "attributes": [],
+    "preReqs": [
+      "math 231"
+    ],
+    "coReqs": [],
+    "semesterExclusions": []
+  },
+  {
+    "longName": "Physics: Electricity and Magnetism",
+    "id": "phys 212",
+    "creditHours": 4.0,
+    "weight": 1.0,
+    "attributes": [],
+    "preReqs": [
+      "phys 211"
+    ],
+    "coReqs": [
+      "math 241"
+    ],
+    "semesterExclusions": []
+  },
+  {
+    "longName": "Intro to CS",
+    "id": "cs 101",
+    "creditHours": 3.0,
+    "weight": 0.0,
+    "attributes": [],
+    "preReqs": [
+      "math 221"
+    ],
+    "coReqs": [],
+    "semesterExclusions": []
+  },
+  {
+    "longName": "Engineering 100",
+    "id": "eng 100",
+    "creditHours": 0.0,
+    "weight": 1.0,
+    "attributes": [],
+    "preReqs": [],
+    "coReqs": [],
+    "semesterExclusions": []
+  },
+  {
+    "longName": "General Chemistry I",
+    "id": "chem 102",
+    "creditHours": 3.0,
+    "weight": 1.0,
+    "attributes": [],
+    "preReqs": [],
+    "coReqs": [
+      "chem 103"
+    ],
+    "semesterExclusions": []
+  },
+  {
+    "longName": "General Chemistry Lab I",
+    "id": "chem 103",
+    "creditHours": 1.0,
+    "weight": 0.0,
+    "attributes": [],
+    "preReqs": [],
+    "coReqs": [
+      "chem 102"
+    ],
+    "semesterExclusions": []
+  },
+  {
+    "longName": "Intro to Diffeq",
+    "id": "math 285",
+    "creditHours": 3.0,
+    "weight": 0.0,
+    "attributes": [],
+    "preReqs": [
+      "math 241"
+    ],
+    "coReqs": [],
+    "semesterExclusions": []
+  },
+  {
+    "longName": "Intro to Circuits",
+    "id": "ece 205",
+    "creditHours": 3.0,
+    "weight": 0.0,
+    "attributes": [],
+    "preReqs": [
+      "phys 212"
+    ],
+    "coReqs": [],
+    "semesterExclusions": []
+  },
+  {
+    "longName": "Introductory Statics",
+    "id": "tam 210",
+    "creditHours": 2.0,
+    "weight": 0.0,
+    "attributes": [],
+    "preReqs": [],
+    "coReqs": [
+      "math 241",
+      "phys 211"
+    ],
+    "semesterExclusions": []
+  }
+]
