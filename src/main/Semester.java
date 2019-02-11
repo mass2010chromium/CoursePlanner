@@ -18,6 +18,7 @@ public class Semester {
 	private static final int REQUISITE_ERROR_PENALTY = 100;
 	private static final int OVER_MAX_HOUR_PENALTY = 20; // Per credit hour
 	private static final double MAX_CREDIT_HOURS = 18;
+	private static final double MIN_CREDIT_HOURS = 9; // One gened per semester
 	
 	private Semester prevSemester;
 	
@@ -100,7 +101,7 @@ public class Semester {
 	 * @param reqs : Requirements from later semesters.
 	 * @return Set of unfulfilled course requirements.
 	 */
-	public Set<String> validate(Set<String> reqs) {
+	public Set<String> validate(Set<String> reqs, List<String> credit) {
 		
 		/*
 		 * Logic:
@@ -141,7 +142,7 @@ public class Semester {
 		// this.isValidated = false; 
 		if (this.isValidated) {
 			if (this.prevSemester == null) return unmetReqs;
-			unmetReqs = this.prevSemester.validate(unmetReqs);
+			unmetReqs = this.prevSemester.validate(unmetReqs, credit);
 			return unmetReqs;
 		}
 		
@@ -182,9 +183,10 @@ public class Semester {
 		}
 		
 		preReqs.addAll(coReqs);
+		preReqs.removeAll(credit);
 		
 		if (this.prevSemester != null) {
-			preReqs = this.prevSemester.validate(preReqs);
+			preReqs = this.prevSemester.validate(preReqs, credit);
 		}
 		
 		weight += creditHours;
@@ -199,6 +201,9 @@ public class Semester {
 		this.isValid = false;
 		if (creditHours > MAX_CREDIT_HOURS) {
 			totalScore += (creditHours - MAX_CREDIT_HOURS) * OVER_MAX_HOUR_PENALTY;
+		}
+		if (creditHours < MIN_CREDIT_HOURS) {
+			totalScore += (MIN_CREDIT_HOURS - creditHours) * OVER_MAX_HOUR_PENALTY;
 		}
 		// If I get here, then I don't have requisite errors or over credit errors!
 		else if (requisiteErrors == 0){
@@ -237,7 +242,7 @@ public class Semester {
 	 */
 	public boolean isValid() throws IllegalStateException {
 		this.checkValidated();
-		return this.isValid && prevSemester.isValid();
+		return this.isValid && (prevSemester == null || prevSemester.isValid());
 	}
 	
 	/**

@@ -3,6 +3,7 @@ package main;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import java.util.stream.Collectors;
 
 /**
  * A semester plan.
@@ -13,6 +14,8 @@ public class Plan {
 	
 	private Semester lastSemester;
 	private List<Semester> semestersFromLast;
+	
+	private List<Course> alreadyTaken;
 	
 	private Random rand;
 	
@@ -29,9 +32,12 @@ public class Plan {
 			semestersFromLast.add(s);
 			s = s.getPrevious();
 		}
+		alreadyTaken = toCopy.alreadyTaken;
 	}
 	
-	public Plan(int numSemesters, int currentSemester, Random rand) {
+	public Plan(int numSemesters, int currentSemester, 
+			Random rand, List<Course> credit) {
+		alreadyTaken = credit;
 		this.rand = rand;
 		lastSemester = new Semester(numSemesters, currentSemester, rand);
 		Semester s = lastSemester;
@@ -60,7 +66,8 @@ public class Plan {
 	
 	public double getScore() {
 		double totalScoreSq = 0;
-		lastSemester.validate(null);
+		lastSemester.validate(null, 
+				alreadyTaken.stream().map(c -> c.id).collect(Collectors.toList()));
 		for (Semester s : semestersFromLast) {
 			totalScoreSq += Math.pow(s.getScore(), 2);
 		}
@@ -79,13 +86,13 @@ public class Plan {
 			s1 = semestersFromLast.get(index1);
 			s2 = semestersFromLast.get(index2);
 		} while (index2 == index1 || s1.getCourseList().isEmpty());
-		swapRandom(s1, s2);
-//		if (rand.nextBoolean() || s2.getCourseList().isEmpty()) {
-//			moveRandom(s1, s2);
-//		}
-//		else {
-//			swapRandom(s1, s2);
-//		}
+//		swapRandom(s1, s2);
+		if (rand.nextBoolean() || s2.getCourseList().isEmpty()) {
+			moveRandom(s1, s2);
+		}
+		else {
+			swapRandom(s1, s2);
+		}
 	}
 	
 	public static void moveRandom(Semester from, Semester to) {

@@ -51,4 +51,18 @@ public class Course {
 	public void setSemesterExclusions(int[] excluded) {
 		this.semesterExclusions = excluded;
 	}
+	
+	@Override
+	public boolean equals(Object other) {
+		return other instanceof Course &&
+				((Course) other).longName.equals(this.longName) && 
+				((Course) other).creditHours == this.creditHours && 
+				((Course) other).weight == this.weight && 
+				((Course) other).id.equals(this.id);
+//				((Course) other).attributes.equals(this.attributes) && 
+//				((Course) other).coReqs.equals(this.coReqs) && 
+//				((Course) other).preReqs.equals(this.preReqs) && 
+//				((Course) other).semesterExclusions.equals(this.semesterExclusions);
+				
+	}
 }

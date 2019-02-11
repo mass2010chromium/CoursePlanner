@@ -52,7 +52,7 @@ public class SimulatedAnnealing {
 			temperature *= 0.99;
 			currentPlan = newPlan;
 		}
-		temperature *= 0.999;
+		temperature *= 0.9999;
 //		else {
 //			temperature *= 0.9999;
 //			double cutoff = 1 / (1 + Math.exp(diff / temperature));

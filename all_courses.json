@@ -496,6 +496,18 @@
     "semesterExclusions": []
   },
   {
+    "longName": "Statistics and Probability I",
+    "id": "stat 400",
+    "creditHours": 4.0,
+    "weight": 0.0,
+    "attributes": [],
+    "preReqs": [
+      "math 241"
+    ],
+    "coReqs": [],
+    "semesterExclusions": []
+  },
+  {
     "longName": "Introductory Statics",
     "id": "tam 210",
     "creditHours": 2.0,
@@ -531,111 +543,5 @@
     ],
     "coReqs": [],
     "semesterExclusions": []
-  },
-  {
-    "longName": "CS Tech Elective 1",
-    "id": "cs 4xx",
-    "creditHours": 3.0,
-    "weight": 0.0,
-    "attributes": [],
-    "preReqs": [],
-    "coReqs": [],
-    "semesterExclusions": [
-	  0,
-	  1,
-	  2,
-	  3
-	]
-  },
-  {
-    "longName": "CS Tech Elective 2",
-    "id": "cs 4xx",
-    "creditHours": 3.0,
-    "weight": 0.0,
-    "attributes": [],
-    "preReqs": [],
-    "coReqs": [],
-    "semesterExclusions": [
-	  0,
-	  1,
-	  2,
-	  3
-	]
-  },
-  {
-    "longName": "CS Tech Elective 3",
-    "id": "cs 4xx",
-    "creditHours": 3.0,
-    "weight": 0.0,
-    "attributes": [],
-    "preReqs": [],
-    "coReqs": [],
-    "semesterExclusions": [
-	  0,
-	  1,
-	  2,
-	  3
-	]
-  },
-  {
-    "longName": "CS Tech Elective 4",
-    "id": "cs 4xx",
-    "creditHours": 3.0,
-    "weight": 0.0,
-    "attributes": [],
-    "preReqs": [],
-    "coReqs": [],
-    "semesterExclusions": [
-	  0,
-	  1,
-	  2,
-	  3
-	]
-  },
-  {
-    "longName": "CS Tech Elective 5",
-    "id": "cs 4xx",
-    "creditHours": 3.0,
-    "weight": 0.0,
-    "attributes": [],
-    "preReqs": [],
-    "coReqs": [],
-    "semesterExclusions": [
-	  0,
-	  1,
-	  2,
-	  3
-	]
-  },
-  {
-    "longName": "CS Tech Elective 6",
-    "id": "cs 4xx",
-    "creditHours": 3.0,
-    "weight": 0.0,
-    "attributes": [],
-    "preReqs": [],
-    "coReqs": [],
-    "semesterExclusions": [
-	  0,
-	  1,
-	  2,
-	  3
-	]
-  },
-  {
-    "longName": "CS Advanced Elective 2",
-    "id": "cs 4xx",
-    "creditHours": 3.0,
-    "weight": 0.0,
-    "attributes": [],
-    "preReqs": [],
-    "coReqs": [],
-    "semesterExclusions": [
-	  0,
-	  1,
-	  2,
-	  3,
-	  4
-	]
   }
 ]

@@ -1,97 +1,5 @@
 [
   {
-    "longName": "Calc 1",
-    "id": "math 221",
-    "creditHours": 4.0,
-    "weight": 0.0,
-    "attributes": [],
-    "preReqs": [],
-    "coReqs": [],
-    "semesterExclusions": []
-  },
-  {
-    "longName": "Calc 2",
-    "id": "math 231",
-    "creditHours": 3.0,
-    "weight": 0.0,
-    "attributes": [],
-    "preReqs": [
-      "math 221"
-    ],
-    "coReqs": [],
-    "semesterExclusions": []
-  },
-  {
-    "longName": "Physics: Mechanics",
-    "id": "phys 211",
-    "creditHours": 4.0,
-    "weight": 1.0,
-    "attributes": [],
-    "preReqs": [],
-    "coReqs": [
-      "math 231"
-    ],
-    "semesterExclusions": []
-  },
-  {
-    "longName": "Calc 3",
-    "id": "math 241",
-    "creditHours": 4.0,
-    "weight": 0.0,
-    "attributes": [],
-    "preReqs": [
-      "math 231"
-    ],
-    "coReqs": [],
-    "semesterExclusions": []
-  },
-  {
-    "longName": "Physics: Electricity and Magnetism",
-    "id": "phys 212",
-    "creditHours": 4.0,
-    "weight": 1.0,
-    "attributes": [],
-    "preReqs": [
-      "phys 211"
-    ],
-    "coReqs": [
-      "math 241"
-    ],
-    "semesterExclusions": []
-  },
-  {
-    "longName": "Intro to CS",
-    "id": "cs 101",
-    "creditHours": 3.0,
-    "weight": 0.0,
-    "attributes": [],
-    "preReqs": [
-      "math 221"
-    ],
-    "coReqs": [],
-    "semesterExclusions": []
-  },
-  {
-    "longName": "Engineering 100",
-    "id": "eng 100",
-    "creditHours": 0.0,
-    "weight": 1.0,
-    "attributes": [],
-    "preReqs": [],
-    "coReqs": [],
-    "semesterExclusions": [  
-      1,
-      2,
-      3,
-      4,
-      5,
-      6,
-      7,
-      8,
-      9
-    ]
-  },
-  {
     "longName": "General Chemistry I",
     "id": "chem 102",
     "creditHours": 3.0,
@@ -116,13 +24,158 @@
     "semesterExclusions": []
   },
   {
-    "longName": "Intro to Diffeq",
-    "id": "math 285",
+    "longName": "Intro to Computing",
+    "id": "cs 101",
     "creditHours": 3.0,
     "weight": 0.0,
     "attributes": [],
     "preReqs": [
-      "math 241"
+      "math 221"
+    ],
+    "coReqs": [],
+    "semesterExclusions": []
+  },
+  {
+    "longName": "Intro to CS",
+    "id": "cs 125",
+    "creditHours": 4.0,
+    "weight": 0.0,
+    "attributes": [],
+    "preReqs": [],
+    "coReqs": [],
+    "semesterExclusions": []
+  },
+  {
+    "longName": "CS code writing (126 or 242)",
+    "id": "cs 126",
+    "creditHours": 3.0,
+    "weight": 2.0,
+    "attributes": [],
+    "preReqs": [
+      "cs 125"
+    ],
+    "coReqs": [],
+    "semesterExclusions": []
+  },
+  {
+    "longName": "Discrete Structures",
+    "id": "cs 173",
+    "creditHours": 3.0,
+    "weight": 0.0,
+    "attributes": [],
+    "preReqs": [
+      "cs 125",
+      "math 221"
+    ],
+    "coReqs": [],
+    "semesterExclusions": []
+  },
+  {
+    "longName": "CS Ethics",
+    "id": "cs 210",
+    "creditHours": 2.0,
+    "weight": 0.0,
+    "attributes": [],
+    "preReqs": [
+      "cs 225"
+    ],
+    "coReqs": [],
+    "semesterExclusions": [
+      0,
+      1
+    ]
+  },
+  {
+    "longName": "Data Structures",
+    "id": "cs 225",
+    "creditHours": 4.0,
+    "weight": 0.0,
+    "attributes": [],
+    "preReqs": [
+      "cs 125",
+      "cs 173"
+    ],
+    "coReqs": [],
+    "semesterExclusions": []
+  },
+  {
+    "longName": "Computer Architecture",
+    "id": "cs 233",
+    "creditHours": 4.0,
+    "weight": 0.0,
+    "attributes": [],
+    "preReqs": [
+      "cs 125",
+      "cs 173"
+    ],
+    "coReqs": [
+      "cs 225"
+    ],
+    "semesterExclusions": []
+  },
+  {
+    "longName": "System Programming",
+    "id": "cs 241",
+    "creditHours": 4.0,
+    "weight": 0.0,
+    "attributes": [],
+    "preReqs": [
+      "cs 233",
+      "cs 225"
+    ],
+    "coReqs": [],
+    "semesterExclusions": []
+  },
+  {
+    "longName": "Numerical Methods 1",
+    "id": "cs 357",
+    "creditHours": 3.0,
+    "weight": 0.0,
+    "attributes": [],
+    "preReqs": [
+      "math 241",
+      "cs 125",
+      "math 415"
+    ],
+    "coReqs": [],
+    "semesterExclusions": []
+  },
+  {
+    "longName": "Stats for CS folks",
+    "id": "cs 361",
+    "creditHours": 3.0,
+    "weight": 0.0,
+    "attributes": [],
+    "preReqs": [
+      "math 221"
+    ],
+    "coReqs": [
+      "math 415"
+    ],
+    "semesterExclusions": []
+  },
+  {
+    "longName": "Intro to Algorithms and Models of Computation",
+    "id": "cs 374",
+    "creditHours": 4.0,
+    "weight": 0.0,
+    "attributes": [],
+    "preReqs": [
+      "cs 225",
+      "math 415"
+    ],
+    "coReqs": [],
+    "semesterExclusions": []
+  },
+  {
+    "longName": "Programming Languages and Compilers",
+    "id": "cs 421",
+    "creditHours": 3.0,
+    "weight": 0.0,
+    "attributes": [],
+    "preReqs": [
+      "cs 233",
+      "cs 374"
     ],
     "coReqs": [],
     "semesterExclusions": []
@@ -140,6 +193,333 @@
     "semesterExclusions": []
   },
   {
+    "longName": "Electrical and Electronic Circuits Lab",
+    "id": "ece 206",
+    "creditHours": 1.0,
+    "weight": 2.0,
+    "attributes": [],
+    "preReqs": [
+      "ece 205"
+    ],
+    "coReqs": [],
+    "semesterExclusions": []
+  },
+  {
+    "longName": "Economics (micro or macro)",
+    "id": "econ 102",
+    "creditHours": 3.0,
+    "weight": 0.0,
+    "attributes": [],
+    "preReqs": [],
+    "coReqs": [],
+    "semesterExclusions": []
+  },
+  {
+    "longName": "Engineering 100",
+    "id": "eng 100",
+    "creditHours": 0.0,
+    "weight": 1.0,
+    "attributes": [],
+    "preReqs": [],
+    "coReqs": [],
+    "semesterExclusions": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  },
+  {
+    "longName": "Calc 1",
+    "id": "math 221",
+    "creditHours": 4.0,
+    "weight": 0.0,
+    "attributes": [],
+    "preReqs": [],
+    "coReqs": [],
+    "semesterExclusions": []
+  },
+  {
+    "longName": "Calc 2",
+    "id": "math 231",
+    "creditHours": 3.0,
+    "weight": 0.0,
+    "attributes": [],
+    "preReqs": [
+      "math 221"
+    ],
+    "coReqs": [],
+    "semesterExclusions": []
+  },
+  {
+    "longName": "Calc 3",
+    "id": "math 241",
+    "creditHours": 4.0,
+    "weight": 0.0,
+    "attributes": [],
+    "preReqs": [
+      "math 231"
+    ],
+    "coReqs": [],
+    "semesterExclusions": []
+  },
+  {
+    "longName": "Intro to Diffeq",
+    "id": "math 285",
+    "creditHours": 3.0,
+    "weight": 0.0,
+    "attributes": [],
+    "preReqs": [
+      "math 241"
+    ],
+    "coReqs": [],
+    "semesterExclusions": []
+  },
+  {
+    "longName": "Applied Linear Algebra",
+    "id": "math 415",
+    "creditHours": 3.0,
+    "weight": 0.0,
+    "attributes": [],
+    "preReqs": [
+      "math 241"
+    ],
+    "coReqs": [],
+    "semesterExclusions": []
+  },
+  {
+    "longName": "Computer-Aided Design",
+    "id": "me 170",
+    "creditHours": 3.0,
+    "weight": 0.0,
+    "attributes": [],
+    "preReqs": [],
+    "coReqs": [],
+    "semesterExclusions": [
+      0,
+      2,
+      4,
+      6,
+      8
+    ]
+  },
+  {
+    "longName": "Thermodynamics",
+    "id": "me 200",
+    "creditHours": 3.0,
+    "weight": 1.0,
+    "attributes": [],
+    "preReqs": [
+      "math 241"
+    ],
+    "coReqs": [],
+    "semesterExclusions": []
+  },
+  {
+    "longName": "Design for Manufacturability",
+    "id": "me 270",
+    "creditHours": 3.0,
+    "weight": 0.0,
+    "attributes": [],
+    "preReqs": [
+      "me 170"
+    ],
+    "coReqs": [],
+    "semesterExclusions": []
+  },
+  {
+    "longName": "Fundamentals of Fluid Dynamics",
+    "id": "me 310",
+    "creditHours": 4.0,
+    "weight": 0.0,
+    "attributes": [],
+    "preReqs": [
+      "math 285"
+    ],
+    "coReqs": [
+      "me 200"
+    ],
+    "semesterExclusions": []
+  },
+  {
+    "longName": "Heat Transfer",
+    "id": "me 320",
+    "creditHours": 4.0,
+    "weight": 0.0,
+    "attributes": [],
+    "preReqs": [
+      "math 285"
+    ],
+    "coReqs": [
+      "me 200"
+    ],
+    "semesterExclusions": []
+  },
+  {
+    "longName": "Engineering Materials",
+    "id": "me 330",
+    "creditHours": 4.0,
+    "weight": 0.0,
+    "attributes": [],
+    "preReqs": [
+      "chem 102",
+      "tam 251"
+    ],
+    "coReqs": [],
+    "semesterExclusions": []
+  },
+  {
+    "longName": "Dynamics of Mechanical Systems",
+    "id": "me 340",
+    "creditHours": 3.5,
+    "weight": 0.0,
+    "attributes": [],
+    "preReqs": [
+      "math 285",
+      "tam 212"
+    ],
+    "coReqs": [
+      "math 415",
+      "ece 205"
+    ],
+    "semesterExclusions": []
+  },
+  {
+    "longName": "Signal Processing",
+    "id": "me 360",
+    "creditHours": 3.5,
+    "weight": 0.0,
+    "attributes": [],
+    "preReqs": [
+      "me 340"
+    ],
+    "coReqs": [],
+    "semesterExclusions": []
+  },
+  {
+    "longName": "Mechanical Design I",
+    "id": "me 370",
+    "creditHours": 3.0,
+    "weight": 0.0,
+    "attributes": [],
+    "preReqs": [
+      "tam 251",
+      "tam 212",
+      "me 270"
+    ],
+    "coReqs": [],
+    "semesterExclusions": []
+  },
+  {
+    "longName": "Mechanical Design II",
+    "id": "me 371",
+    "creditHours": 3.0,
+    "weight": 0.0,
+    "attributes": [],
+    "preReqs": [
+      "me 330",
+      "me 370"
+    ],
+    "coReqs": [],
+    "semesterExclusions": []
+  },
+  {
+    "longName": "ME Senior Design",
+    "id": "me 470",
+    "creditHours": 3.0,
+    "weight": 3.0,
+    "attributes": [],
+    "preReqs": [],
+    "coReqs": [
+      "me 310",
+      "me 200",
+      "me 330",
+      "me 320",
+      "me 340",
+      "me 370",
+      "me 371",
+      "me 360",
+      "me 170",
+      "me 270"
+    ],
+    "semesterExclusions": [
+      1,
+      3,
+      5,
+      7,
+      9
+    ]
+  },
+  {
+    "longName": "Physics: Mechanics",
+    "id": "phys 211",
+    "creditHours": 4.0,
+    "weight": 1.0,
+    "attributes": [],
+    "preReqs": [],
+    "coReqs": [
+      "math 231"
+    ],
+    "semesterExclusions": []
+  },
+  {
+    "longName": "Physics: Electricity and Magnetism",
+    "id": "phys 212",
+    "creditHours": 4.0,
+    "weight": 1.0,
+    "attributes": [],
+    "preReqs": [
+      "phys 211"
+    ],
+    "coReqs": [
+      "math 241"
+    ],
+    "semesterExclusions": []
+  },
+  {
+    "longName": "University Physics - Thermal Physics",
+    "id": "phys 213",
+    "creditHours": 2.0,
+    "weight": 1.0,
+    "attributes": [],
+    "preReqs": [
+      "phys 211"
+    ],
+    "coReqs": [
+      "math 241"
+    ],
+    "semesterExclusions": []
+  },
+  {
+    "longName": "University Physics - Quantum Physics",
+    "id": "phys 214",
+    "creditHours": 2.0,
+    "weight": 1.0,
+    "attributes": [],
+    "preReqs": [
+      "phys 212"
+    ],
+    "coReqs": [],
+    "semesterExclusions": []
+  },
+  {
+    "longName": "Statistics and Probability I",
+    "id": "stat 400",
+    "creditHours": 4.0,
+    "weight": 0.0,
+    "attributes": [],
+    "preReqs": [
+      "math 241"
+    ],
+    "coReqs": [],
+    "semesterExclusions": []
+  },
+  {
     "longName": "Introductory Statics",
     "id": "tam 210",
     "creditHours": 2.0,
@@ -150,6 +530,30 @@
       "math 241",
       "phys 211"
     ],
+    "semesterExclusions": []
+  },
+  {
+    "longName": "Introductory Dynamics",
+    "id": "tam 212",
+    "creditHours": 3.0,
+    "weight": 1.0,
+    "attributes": [],
+    "preReqs": [
+      "tam 210"
+    ],
+    "coReqs": [],
+    "semesterExclusions": []
+  },
+  {
+    "longName": "Introductory Solid Mechanics",
+    "id": "tam 251",
+    "creditHours": 3.0,
+    "weight": 0.0,
+    "attributes": [],
+    "preReqs": [
+      "tam 210"
+    ],
+    "coReqs": [],
     "semesterExclusions": []
   }
 ]

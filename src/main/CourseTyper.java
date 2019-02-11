@@ -5,6 +5,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Writer;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
@@ -39,8 +40,15 @@ public class CourseTyper {
 			}
 			
 			while (true) {
-				print("Choose action: (list, detail, write, exit)");
+				print("Choose action: (list, detail, write, sort, exit)");
 				String action = scan.nextLine().toLowerCase();
+				if (action.equals("sort")) {
+					print("Sorting and writing courses...");
+					Collections.sort(courses, (a, b) -> a.id.compareTo(b.id));
+					gson.toJson(courses, writer);
+					print("Exiting course typer");
+					break;
+				}
 				if (action.equals("list")) {
 					listCourses(courses);
 				}

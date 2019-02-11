@@ -14,14 +14,22 @@ public class Main {
 	
 	public static void main(String[] args) {
 		Random testRand = new Random(0);
-		Plan p = new Plan(2, -1, testRand);
 
-		try (FileReader reader = new FileReader(
+		try (FileReader courseReader = new FileReader(
 				"src/resources/testing/required_classes.json");
+				FileReader creditReader = new FileReader(
+						"src/resources/testing/taken.json");
 				Scanner scn = new Scanner(System.in)) {
 			Gson gson = new Gson();
-			List<Course> courses = gson.fromJson(reader, 
+			List<Course> courses = gson.fromJson(courseReader, 
 					new TypeToken<List<Course>>() {}.getType());
+			
+			List<Course> credit = gson.fromJson(creditReader, 
+					new TypeToken<List<Course>>() {}.getType());
+
+			courses.removeAll(credit);
+			
+			Plan p = new Plan(6, 1, testRand, credit);
 			
 			p.distributeCourses(courses);
 			
@@ -30,10 +38,10 @@ public class Main {
 			
 			SimulatedAnnealing optimizer = new SimulatedAnnealing(p, testRand, courses.size());
 			
-			while (optimizer.getTemperature() > 100) {
+			while (optimizer.getTemperature() > 1) {
 				optimizer.annealCycle();
-				Plan current = optimizer.getCurrentPlan();
-				
+//				Plan current = optimizer.getCurrentPlan();
+//				
 //				System.out.println(current);
 //				System.out.println(current.getScore());
 //				System.out.println("Temperature: " + optimizer.getTemperature());
