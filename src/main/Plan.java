@@ -59,28 +59,33 @@ public class Plan {
 	}
 	
 	public double getScore() {
-		double totalScore = 0;
+		double totalScoreSq = 0;
 		lastSemester.validate(null);
 		for (Semester s : semestersFromLast) {
-			totalScore += Math.pow(s.getScore(), 2);
+			totalScoreSq += Math.pow(s.getScore(), 2);
 		}
-		return totalScore;
+//		return Math.sqrt(totalScoreSq);
+		return totalScoreSq;
 	}
 	
 	public void randomMove() {
-		int index1 = rand.nextInt(semestersFromLast.size());
+		int index1;
 		int index2;
+		Semester s1;
+		Semester s2;
 		do {
+			index1 = rand.nextInt(semestersFromLast.size());
 			index2 = rand.nextInt(semestersFromLast.size());
-		} while (index2 == index1);
-		Semester s1 = semestersFromLast.get(index1);
-		Semester s2 = semestersFromLast.get(index2);
-		if (rand.nextBoolean()) {
-			moveRandom(s1, s2);
-		}
-		else {
-			swapRandom(s1, s2);
-		}
+			s1 = semestersFromLast.get(index1);
+			s2 = semestersFromLast.get(index2);
+		} while (index2 == index1 || s1.getCourseList().isEmpty());
+		swapRandom(s1, s2);
+//		if (rand.nextBoolean() || s2.getCourseList().isEmpty()) {
+//			moveRandom(s1, s2);
+//		}
+//		else {
+//			swapRandom(s1, s2);
+//		}
 	}
 	
 	public static void moveRandom(Semester from, Semester to) {
