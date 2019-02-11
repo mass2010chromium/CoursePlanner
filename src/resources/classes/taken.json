@@ -2,7 +2,7 @@
 	"semesters":2,
 	"courses":[  
 		{
-			
+			"longName": "Math 220"
 		}
 	]
 }

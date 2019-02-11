@@ -30,10 +30,10 @@ public class CourseTyper {
 				courses.addAll(prevCourses);
 				print("Found old courses.");
 				print("Added " + courses.size() + " existing courses:");
-				for (int i = 0; i < Math.min(10, courses.size()); i++) {
+				for (int i = 0; i < Math.min(5, courses.size()); i++) {
 					print("  > " + courses.get(i).longName);
 				}
-				if (courses.size() > 10) print("...");
+				if (courses.size() > 5) print("...");
 			} catch (JsonIOException e) {
 				print("Old courses not found.");
 			}
@@ -110,16 +110,15 @@ public class CourseTyper {
 	
 	public static void listCourses(List<Course> courses) {
 		print("Found " + courses.size() + " existing courses:");
-		int maxLength = 0;
+		int maxLengthName = 0;
 		for (Course c : courses) {
-			int length = c.longName.length() + c.id.length();
-			if (length > maxLength) {
-				maxLength = length;
+			int length = c.longName.length();
+			if (length > maxLengthName) {
+				maxLengthName = length;
 			}
 		}
-		maxLength *= 0.8;
 		for (Course c : courses) {
-			System.out.printf("  > %-" + maxLength + "s %" + maxLength + "s %n", 
+			System.out.printf("  > %-" + maxLengthName + "s %15s %n", 
 					c.longName, c.id);
 		}
 		print();

@@ -24,7 +24,7 @@ public class Semester {
 	private Map<String, Integer> totalAttributes;
 	private Map<String, Double> attributeHours;
 	
-	private Set<String> unmetPreReqs;
+	private Set<String> unmetReqs;
 	
 	private List<Course> courseList;
 	private int semesterNum;
@@ -58,14 +58,14 @@ public class Semester {
 		isValidated = false;
 	}
 	
-	public Semester(int numSemesters, Random rand) {
+	public Semester(int numSemesters, int currentSemester, Random rand) {
 		this.rand = rand;
 		if (numSemesters > 1) {
-			prevSemester = new Semester(numSemesters - 1, rand);
+			prevSemester = new Semester(numSemesters - 1, currentSemester, rand);
 		}
 		courseList = new ArrayList<Course>();
 		isValidated = false;
-		semesterNum = numSemesters;
+		semesterNum = numSemesters + currentSemester;
 	}
 	
 	/**
@@ -140,9 +140,9 @@ public class Semester {
 		// Shouldn't be needed but just in case; reset validated
 		// this.isValidated = false; 
 		if (this.isValidated) {
-			if (this.prevSemester == null) return unmetPreReqs;
-			unmetPreReqs = this.prevSemester.validate(unmetPreReqs);
-			return unmetPreReqs;
+			if (this.prevSemester == null) return unmetReqs;
+			unmetReqs = this.prevSemester.validate(unmetReqs);
+			return unmetReqs;
 		}
 		
 		this.totalAttributes = new HashMap<String, Integer>();
@@ -175,6 +175,10 @@ public class Semester {
 		
 		for (Course course : courseList) {
 			coReqs.remove(course.id);
+//			if (coReqs.remove(course.id)) {
+//				System.out.println("Semester " + this.semesterNum + 
+//						" passed " + course.id);
+//			}
 		}
 		
 		preReqs.addAll(coReqs);
@@ -201,8 +205,13 @@ public class Semester {
 			this.isValid = true;
 		}
 		
+//		System.out.println("Semester " + semesterNum + " failed:");
+//		for (String s : preReqs) {
+//			System.out.println(s);
+//		}
+		
 		this.score = totalScore;
-		this.unmetPreReqs = preReqs;
+		this.unmetReqs = preReqs;
 		this.isValidated = true;
 		return preReqs;
 	}
@@ -321,6 +330,21 @@ public class Semester {
 		return courseList.remove(rand.nextInt(courseList.size()));
 	}
 	
+	public Course removeCourse(String id) {
+		Course ret = null;
+		for (Course c : this.courseList) {
+			if (c.id.equals(id)) {
+				ret = c;
+				break;
+			}
+		}
+		if (ret != null) {
+			isValidated = false;
+			courseList.remove(ret);
+		}
+		return ret;
+	}
+	
 	/**
 	 * Adds a course to this semester. Sets validated to false.
 	 * @param c : Course to add.
@@ -328,5 +352,15 @@ public class Semester {
 	public void addCourse(Course c) {
 		isValidated = false;
 		courseList.add(c);
+	}
+	
+	@Override
+	public String toString() {
+		StringBuffer buf = new StringBuffer();
+		buf.append("Semester " + this.semesterNum);
+		for (Course c : this.courseList) {
+			buf.append("\n  > " + c.longName);
+		}
+		return buf.toString();
 	}
 }

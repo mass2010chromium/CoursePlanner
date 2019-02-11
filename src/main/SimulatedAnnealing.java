@@ -7,6 +7,8 @@ package main;
  */
 public class SimulatedAnnealing {
 	
+	private double temperature;
+	
 	public SimulatedAnnealing() {
 		
 	}
