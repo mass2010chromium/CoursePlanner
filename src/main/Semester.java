@@ -364,7 +364,9 @@ public class Semester {
 		StringBuffer buf = new StringBuffer();
 		buf.append("Semester " + this.semesterNum);
 		for (Course c : this.courseList) {
-			buf.append("\n  > " + c.longName);
+			buf.append("\n  > ");
+			buf.append(String.format("%-15s", c.id));
+			buf.append(c.longName);
 		}
 		return buf.toString();
 	}

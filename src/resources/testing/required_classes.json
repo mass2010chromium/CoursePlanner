@@ -55,15 +55,7 @@
       "cs 125"
     ],
     "coReqs": [],
-    "semesterExclusions": [
-		3,
-		4,
-		5,
-		6,
-		7,
-		8,
-		9
-	]
+    "semesterExclusions": []
   },
   {
     "longName": "Discrete Structures",
@@ -97,20 +89,30 @@
     "longName": "Data Structures",
     "id": "cs 225",
     "creditHours": 4.0,
-    "weight": 0.0,
+    "weight": 0.5,
     "attributes": [],
     "preReqs": [
       "cs 125",
       "cs 173"
     ],
     "coReqs": [],
-    "semesterExclusions": []
+    "semesterExclusions": [
+	  0,
+	  1,
+	  3,
+	  4,
+	  5,
+	  6,
+	  7,
+	  8,
+	  9
+	]
   },
   {
     "longName": "Computer Architecture",
     "id": "cs 233",
     "creditHours": 4.0,
-    "weight": 0.0,
+    "weight": 0.5,
     "attributes": [],
     "preReqs": [
       "cs 125",
@@ -125,25 +127,11 @@
     "longName": "System Programming",
     "id": "cs 241",
     "creditHours": 4.0,
-    "weight": 0.0,
+    "weight": 1.0,
     "attributes": [],
     "preReqs": [
       "cs 233",
       "cs 225"
-    ],
-    "coReqs": [],
-    "semesterExclusions": []
-  },
-  {
-    "longName": "Numerical Methods 1",
-    "id": "cs 357",
-    "creditHours": 3.0,
-    "weight": 0.0,
-    "attributes": [],
-    "preReqs": [
-      "math 241",
-      "cs 125",
-      "math 415"
     ],
     "coReqs": [],
     "semesterExclusions": []
@@ -166,7 +154,7 @@
     "longName": "Intro to Algorithms and Models of Computation",
     "id": "cs 374",
     "creditHours": 4.0,
-    "weight": 0.0,
+    "weight": 1.5,
     "attributes": [],
     "preReqs": [
       "cs 225",
@@ -189,6 +177,20 @@
     "semesterExclusions": []
   },
   {
+    "longName": "Numerical Analysis",
+    "id": "cs 450",
+    "creditHours": 3.0,
+    "weight": 0.5,
+    "attributes": [],
+    "preReqs": [
+      "math 285",
+      "cs 125",
+      "math 415"
+    ],
+    "coReqs": [],
+    "semesterExclusions": []
+  },
+  {
     "longName": "Intro to Circuits",
     "id": "ece 205",
     "creditHours": 3.0,
@@ -204,21 +206,23 @@
     "longName": "Electrical and Electronic Circuits Lab",
     "id": "ece 206",
     "creditHours": 1.0,
-    "weight": 2.0,
+    "weight": 0.5,
     "attributes": [],
     "preReqs": [
       "ece 205"
     ],
     "coReqs": [],
     "semesterExclusions": [
-		3,
-		4,
-		5,
-		6,
-		7,
-		8,
-		9
-	]	
+	  0,
+	  1,
+	  3,
+	  4,
+	  5,
+	  6,
+	  7,
+	  8,
+	  9
+	]
   },
   {
     "longName": "Economics (micro or macro)",
@@ -328,7 +332,7 @@
     "longName": "Thermodynamics",
     "id": "me 200",
     "creditHours": 3.0,
-    "weight": 1.0,
+    "weight": 0.5,
     "attributes": [],
     "preReqs": [
       "math 241"
@@ -352,7 +356,7 @@
     "longName": "Fundamentals of Fluid Dynamics",
     "id": "me 310",
     "creditHours": 4.0,
-    "weight": 0.0,
+    "weight": 1.5,
     "attributes": [],
     "preReqs": [
       "math 285"
@@ -366,7 +370,7 @@
     "longName": "Heat Transfer",
     "id": "me 320",
     "creditHours": 4.0,
-    "weight": 0.0,
+    "weight": 1.5,
     "attributes": [],
     "preReqs": [
       "math 285"
@@ -380,7 +384,7 @@
     "longName": "Engineering Materials",
     "id": "me 330",
     "creditHours": 4.0,
-    "weight": 0.0,
+    "weight": 0.5,
     "attributes": [],
     "preReqs": [
       "chem 102",
@@ -409,7 +413,7 @@
     "longName": "Signal Processing",
     "id": "me 360",
     "creditHours": 3.5,
-    "weight": 0.0,
+    "weight": 0.5,
     "attributes": [],
     "preReqs": [
       "me 340"
@@ -443,6 +447,37 @@
     ],
     "coReqs": [],
     "semesterExclusions": []
+  },
+  {
+    "longName": "Introduction to Robotics",
+    "id": "me 445",
+    "creditHours": 4.0,
+    "weight": 0.0,
+    "attributes": [],
+    "preReqs": [
+      "math 415"
+    ],
+    "coReqs": [],
+    "semesterExclusions": []
+  },
+  {
+    "longName": "Computer control of Mechanical Systems",
+    "id": "me 461",
+    "creditHours": 3.0,
+    "weight": 0.0,
+    "attributes": [],
+    "preReqs": [
+      "me 330",
+      "me 370"
+    ],
+    "coReqs": [],
+    "semesterExclusions": [
+	  1,
+	  3,
+	  5,
+	  7,
+	  9
+	]
   },
   {
     "longName": "ME Senior Design",
@@ -524,18 +559,6 @@
     "semesterExclusions": []
   },
   {
-    "longName": "Statistics and Probability I",
-    "id": "stat 400",
-    "creditHours": 4.0,
-    "weight": 0.0,
-    "attributes": [],
-    "preReqs": [
-      "math 241"
-    ],
-    "coReqs": [],
-    "semesterExclusions": []
-  },
-  {
     "longName": "Introductory Statics",
     "id": "tam 210",
     "creditHours": 2.0,
@@ -606,22 +629,21 @@
     "longName": "CS Tech Elective 1",
     "id": "cs 4xx",
     "creditHours": 3.0,
-    "weight": 0.0,
+    "weight": 0.5,
     "attributes": [],
     "preReqs": [],
     "coReqs": [],
     "semesterExclusions": [
 	  0,
 	  1,
-	  2,
-	  3
+	  2
 	]
   },
   {
     "longName": "CS Tech Elective 2",
     "id": "cs 4xx",
     "creditHours": 3.0,
-    "weight": 0.0,
+    "weight": 0.5,
     "attributes": [],
     "preReqs": [],
     "coReqs": [],
@@ -636,7 +658,7 @@
     "longName": "CS Tech Elective 3",
     "id": "cs 4xx",
     "creditHours": 3.0,
-    "weight": 0.0,
+    "weight": 0.5,
     "attributes": [],
     "preReqs": [],
     "coReqs": [],
@@ -651,7 +673,7 @@
     "longName": "CS Tech Elective 4",
     "id": "cs 4xx",
     "creditHours": 3.0,
-    "weight": 0.0,
+    "weight": 0.5,
     "attributes": [],
     "preReqs": [],
     "coReqs": [],
@@ -666,7 +688,7 @@
     "longName": "CS Tech Elective 5",
     "id": "cs 4xx",
     "creditHours": 3.0,
-    "weight": 0.0,
+    "weight": 0.5,
     "attributes": [],
     "preReqs": [],
     "coReqs": [],
@@ -681,7 +703,7 @@
     "longName": "CS Tech Elective 6",
     "id": "cs 4xx",
     "creditHours": 3.0,
-    "weight": 0.0,
+    "weight": 0.5,
     "attributes": [],
     "preReqs": [],
     "coReqs": [],
@@ -690,22 +712,6 @@
 	  1,
 	  2,
 	  3
-	]
-  },
-  {
-    "longName": "CS Advanced Elective 2",
-    "id": "cs 4xx",
-    "creditHours": 3.0,
-    "weight": 0.0,
-    "attributes": [],
-    "preReqs": [],
-    "coReqs": [],
-    "semesterExclusions": [
-	  0,
-	  1,
-	  2,
-	  3,
-	  4
 	]
   }
 ]

@@ -126,8 +126,8 @@ public class CourseTyper {
 			}
 		}
 		for (Course c : courses) {
-			System.out.printf("  > %-" + maxLengthName + "s %15s %n", 
-					c.longName, c.id);
+			System.out.printf("  > %-10s %-" + maxLengthName + "s %n", 
+					c.id, c.longName);
 		}
 		print();
 	}

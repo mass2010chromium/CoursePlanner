@@ -13,7 +13,7 @@ import com.google.gson.reflect.TypeToken;
 public class Main {
 	
 	public static void main(String[] args) {
-		Random testRand = new Random(0);
+		Random testRand = new Random(1);
 
 		try (FileReader courseReader = new FileReader(
 				"src/resources/testing/required_classes.json");

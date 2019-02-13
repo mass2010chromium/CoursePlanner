@@ -89,7 +89,7 @@
     "longName": "Data Structures",
     "id": "cs 225",
     "creditHours": 4.0,
-    "weight": 0.0,
+    "weight": 0.5,
     "attributes": [],
     "preReqs": [
       "cs 125",
@@ -102,7 +102,7 @@
     "longName": "Computer Architecture",
     "id": "cs 233",
     "creditHours": 4.0,
-    "weight": 0.0,
+    "weight": 0.5,
     "attributes": [],
     "preReqs": [
       "cs 125",
@@ -117,7 +117,7 @@
     "longName": "System Programming",
     "id": "cs 241",
     "creditHours": 4.0,
-    "weight": 0.0,
+    "weight": 1.0,
     "attributes": [],
     "preReqs": [
       "cs 233",
@@ -130,7 +130,7 @@
     "longName": "Numerical Methods 1",
     "id": "cs 357",
     "creditHours": 3.0,
-    "weight": 0.0,
+    "weight": 0.5,
     "attributes": [],
     "preReqs": [
       "math 241",
@@ -158,7 +158,7 @@
     "longName": "Intro to Algorithms and Models of Computation",
     "id": "cs 374",
     "creditHours": 4.0,
-    "weight": 0.0,
+    "weight": 1.0,
     "attributes": [],
     "preReqs": [
       "cs 225",
@@ -196,7 +196,7 @@
     "longName": "Electrical and Electronic Circuits Lab",
     "id": "ece 206",
     "creditHours": 1.0,
-    "weight": 2.0,
+    "weight": 0.5,
     "attributes": [],
     "preReqs": [
       "ece 205"
@@ -312,7 +312,7 @@
     "longName": "Thermodynamics",
     "id": "me 200",
     "creditHours": 3.0,
-    "weight": 1.0,
+    "weight": 0.5,
     "attributes": [],
     "preReqs": [
       "math 241"
@@ -336,7 +336,7 @@
     "longName": "Fundamentals of Fluid Dynamics",
     "id": "me 310",
     "creditHours": 4.0,
-    "weight": 0.0,
+    "weight": 1.0,
     "attributes": [],
     "preReqs": [
       "math 285"
@@ -350,7 +350,7 @@
     "longName": "Heat Transfer",
     "id": "me 320",
     "creditHours": 4.0,
-    "weight": 0.0,
+    "weight": 1.5,
     "attributes": [],
     "preReqs": [
       "math 285"
@@ -364,7 +364,7 @@
     "longName": "Engineering Materials",
     "id": "me 330",
     "creditHours": 4.0,
-    "weight": 0.0,
+    "weight": 2.0,
     "attributes": [],
     "preReqs": [
       "chem 102",
@@ -393,7 +393,7 @@
     "longName": "Signal Processing",
     "id": "me 360",
     "creditHours": 3.5,
-    "weight": 0.0,
+    "weight": 0.5,
     "attributes": [],
     "preReqs": [
       "me 340"
@@ -418,6 +418,19 @@
   {
     "longName": "Mechanical Design II",
     "id": "me 371",
+    "creditHours": 3.0,
+    "weight": 0.0,
+    "attributes": [],
+    "preReqs": [
+      "me 330",
+      "me 370"
+    ],
+    "coReqs": [],
+    "semesterExclusions": []
+  },
+  {
+    "longName": "Computer control of Mechanical Systems",
+    "id": "me 461",
     "creditHours": 3.0,
     "weight": 0.0,
     "attributes": [],
@@ -511,7 +524,7 @@
     "longName": "Statistics and Probability I",
     "id": "stat 400",
     "creditHours": 4.0,
-    "weight": 0.0,
+    "weight": 0.5,
     "attributes": [],
     "preReqs": [
       "math 241"
